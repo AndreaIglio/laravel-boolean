@@ -12,13 +12,13 @@ class PageController extends Controller
 {
     
 
-    public function index(Post $post)
+    public function index()
     {
         // var_dump($post);
 
         $posts = Post::all();
         // dd($posts);
-        return view('home', compact($posts));
+        return view('home', compact('posts'));
     }
 
 
